@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        code {
+          @apply px-2 py-0.5 rounded bg-[#f9f2f4] text-[#e83e8c];
+        }
+      }
+    </style>
+    <style>
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+    </style>
+    <link href="assets/images/favicon.ico" rel="icon" />
+    <title>Documentation | TutorLab</title>
+  </head>
+  <body class="flex min-h-full bg-white antialiased">
+    <div class="w-full">
+      <div class="h-full lg:ml-72 xl:ml-80">
+        <header
+          class="contents lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex"
+        >
+          <div
+            class="contents lg:pointer-events-auto lg:block lg:w-72 lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:px-6 lg:pb-8 lg:pt-4 xl:w-80"
+          >
+            <div class="hidden lg:flex">
+              <a aria-label="Home" href="#about"
+                ><img src="assets/images/logo.png" alt="" class="h-6"
+              /></a>
+            </div>
+            <div
+              class="fixed lg:justify-end inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80 backdrop-blur-sm lg:left-72 xl:left-80 bg-transparent"
+            >
+              <div
+                class="absolute inset-x-0 top-full h-px transition bg-zinc-900/10"
+              ></div>
+              <div class="flex items-center gap-5 lg:hidden">
+                <button
+                  type="button"
+                  class="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5"
+                  aria-label="Toggle navigation"
+                  id="toggle-button"
+                  onclick="toggleBtn()"
+                >
+                  <svg
+                    viewBox="0 0 10 9"
+                    fill="none"
+                    stroke-linecap="round"
+                    aria-hidden="true"
+                    class="w-2.5 stroke-zinc-900"
+                  >
+                    <path d="M.5 1h9M.5 8h9M.5 4.5h9"></path>
+                  </svg>
+                </button>
+                <a aria-label="Home" href="#about"
+                  ><img src="assets/images/logo.png" alt="" class="h-6"
+                /></a>
+              </div>
+              <div class="flex items-center gap-5">
+                <nav class="block">
+                  <ul role="list" class="flex items-center gap-8">
+                    <li>
+                      <a
+                        class="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900"
+                        target="_blank"
+                        href="https://support.itech-theme.com/"
+                        >Support</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900"
+                        href="#"
+                        >v1.0</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <nav class="hidden lg:mt-10 lg:block" id="custom-navbar">
+              <div class="relative">
+                <button
+                  class="lg:hidden text-xl absolute right-[10px] -top-[20px] z-[60]"
+                  onclick="closeNavbar()"
+                >
+                  &#10005;
+                </button>
+              </div>
+              <ul>
+                <li class="relative mt-0">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    Introduction
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#about"
+                          ><span class="truncate">About</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#features"
+                          ><span class="truncate">Features</span></a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#why-choose-us"
+                          ><span class="truncate">Why Choose TutorLab</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    System Requirements
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#minimum-hardware-requirements"
+                          ><span class="truncate"
+                            >Hardware Requirements</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#operating-system"
+                          ><span class="truncate">Operating System</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#hosting-environment"
+                          ><span class="truncate">Hosting Environment</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#additional-notes"
+                          ><span class="truncate">Additional Notes</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    Installation
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#frontend-installation"
+                          ><span class="truncate">Frontend</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#backend-installation"
+                          ><span class="truncate">Backend</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    Vercel Deployment
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#frontend-to-vercel"
+                          ><span class="truncate">Frontend to Vercel</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#backend-to-vercel"
+                          ><span class="truncate">Backend to Vercel</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    VPS Installation
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#prerequisites-vps-installation"
+                          ><span class="truncate">Prerequisites</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#mysql-installation"
+                          ><span class="truncate">MySQL Installation</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#node-js-installation"
+                          ><span class="truncate">Node.js Installation</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#setting-up-nginx"
+                          ><span class="truncate">Setting Up Nginx</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#tmux-installation"
+                          ><span class="truncate">Tmux Installation</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    Project Installation on VPS
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#frontend-installation-on-vps"
+                          ><span class="truncate"
+                            >Frontend Installation</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#backend-installation-on-vps"
+                          ><span class="truncate">Backend Installation</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative mt-6">
+                  <h2 class="text-sm font-medium text-zinc-900">
+                    Pages Preview
+                  </h2>
+                  <div class="relative mt-3 pl-2">
+                    <ul class="border-l border-zinc-900/10">
+                      <li>
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900"
+                          href="#pages-preview"
+                          ><span class="truncate">Preview</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="relative flex h-full flex-col px-4 pt-14 sm:px-6 lg:px-8">
+          <main class="flex-auto">
+            <article class="flex h-full flex-col pb-10 pt-16">
+              <div class="flex-auto lg:max-w-7xl mx-auto">
+                <div
+                  class="absolute inset-0 -z-10 mx-0 max-w-none overflow-hidden"
+                >
+                  <div
+                    class="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem]"
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r from-[#36b49f] to-[#DBFF75] opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"
+                    ></div>
+                  </div>
+                </div>
+                <!-- introduction section -->
+                <div>
+                  <div id="about" class="scroll-mt-24">
+                    <h1 class="text-2xl font-bold mb-2">
+                      TutorLMS: Learning Management System | Next.js | SaaS
+                    </h1>
+                    <p class="text-sm sm:text-base leading-7">
+                      Thank you so much for purchasing tutorlab item from
+                      themeforest.
+                    </p>
+                    <div
+                      class="grid grid-cols-2 gap-y-2 gap-x-6 mt-4 border-t border-zinc-900/10 pt-4"
+                    >
+                      <div class="flex items-center gap-x-2">
+                        <span class="font-medium">Version:</span>
+                        <span>1.0</span>
+                      </div>
+                      <div class="flex items-center gap-x-2">
+                        <span class="font-medium">Created:</span>
+                        <span>9 Jan, 2024</span>
+                      </div>
+                      <div class="flex items-center gap-x-2">
+                        <span class="font-medium">Author:</span>
+                        <a
+                          href="https://itech-softsolutions.com"
+                          target="_blank"
+                          class="underline text-zinc-600"
+                          >Itech soft</a
+                        >
+                      </div>
+                      <div class="flex items-center gap-x-2">
+                        <span class="font-medium">Update:</span>
+                        <span>9 Jan, 2024</span>
+                      </div>
+                    </div>
+                    <div class="mt-8">
+                      <div
+                        class="px-3 py-2 rounded bg-emerald-500 text-white inline-block"
+                      >
+                        <span
+                          >If you have any questions that are beyond the scope
+                          of this help file, Please feel free to email via
+                        </span>
+                        <a
+                          target="_blank"
+                          href="https://support.itech-theme.com/"
+                          class="underline font-bold"
+                          >Item Support Page</a
+                        >.
+                      </div>
+                    </div>
+                    <div class="mt-16">
+                      <h2 class="text-lg font-semibold mb-2">Introduction</h2>
+                      <p class="text-sm sm:text-base leading-7">
+                        Experience education redefined with TutorLab, an
+                        innovative Learning Management System that seamlessly
+                        blends cutting-edge technologies for a transformative
+                        learning journey. In three seamless steps, TutorLab
+                        marries the power of Next.js and Nest.js, weaves in the
+                        elegance of Tailwind CSS, and introduces hassle-free
+                        payment integration. Begin your adventure by exploring a
+                        vast realm of knowledge with TutorLab's intuitive
+                        interface, powered by Next.js and Nest.js. The dynamic
+                        duo ensures a lightning-fast, responsive platform,
+                        making each course selection an engaging exploration.
+                        Next.js brings swift loading times, while Nest.js
+                        provides a scalable backend, laying the foundation for
+                        an intellectually stimulating learning environment. As
+                        you dive into the content, TutorLab's responsive design,
+                        adorned with Tailwind CSS, enchants users with a
+                        visually captivating experience. Tailwind CSS's
+                        utility-first approach not only enhances aesthetics but
+                        also crafts a sleek, modern design. TutorLab becomes a
+                        visual masterpiece, elevating the educational journey
+                        into a visually immersive adventure. The third step
+                        invites educators to unleash their expertise
+                        effortlessly. Integrated with Next.js and Nest.js,
+                        TutorLab empowers instructors to focus on content
+                        creation, leaving the technicalities to the platform's
+                        robust framework. But TutorLab doesn't stop there; it
+                        introduces a new dimension with seamless payment
+                        integration. Connecting with Stripe, PayPal, Paystack,
+                        and Razorpay, TutorLab ensures global accessibility,
+                        offering diverse payment options for a secure and
+                        convenient transaction process. TutorLab beckons you to
+                        a future where education transcends boundaries. Bid
+                        farewell to traditional learning and join the revolution
+                        where every lesson is an invitation to explore,
+                        discover, and excel. With TutorLab, education becomes an
+                        unforgettable journey, illustrating the profound impact
+                        of technology and innovation in shaping the future of
+                        learning.
+                      </p>
+                    </div>
+                  </div>
+                  <div id="features" class="scroll-mt-24 mt-16">
+                    <h2 class="text-lg font-semibold mb-4">Key Features</h2>
+                    <div
+                      class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
+                    >
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Effortless Course Enrollment
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Simplify the learning process with seamless course
+                            enrollment. Students can easily discover, enroll,
+                            and navigate through a diverse range of courses,
+                            fostering a dynamic and engaging learning
+                            environment.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Lightning-Fast Video Loading
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Elevate your video learning experience with
+                            TutorLab's lightning-fast video loading
+                            capabilities. No more waiting - dive straight into
+                            your lessons and absorb knowledge without
+                            interruptions.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Join as Instructor
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Empower educators to share their expertise by easily
+                            joining as instructors. TutorLab provides a
+                            user-friendly onboarding process for instructors,
+                            ensuring a hassle-free start to their teaching
+                            journey.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Advanced Admin Panel
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Take control with TutorLab's advanced admin panel.
+                            Effortlessly manage courses, users, and content,
+                            while gaining valuable insights through
+                            comprehensive analytics. Customize your LMS to meet
+                            the unique needs of your educational institution.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Multiple Payment Options
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Cater to diverse audiences by offering multiple
+                            payment options. Whether it's credit cards, digital
+                            wallets, or other payment methods, TutorLab ensures
+                            a secure and convenient payment process for users
+                            and administrators alike.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Interactive Assessments
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Gauge and enhance student understanding with
+                            interactive assessments. TutorLab supports various
+                            assessment formats, fostering a dynamic learning
+                            experience that goes beyond traditional methods.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Comprehensive Reporting
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Monitor progress and track performance effortlessly
+                            with TutorLab's comprehensive reporting system. Get
+                            real-time insights into user engagement, course
+                            popularity, and more, enabling informed
+                            decision-making.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <h4
+                            class="text-sm sm:text-base font-semibold leading-7 text-zinc-900 dark:text-white"
+                          >
+                            Quiz Management
+                          </h4>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Empower educators with a dedicated Quiz Management
+                            feature. Create, edit, and manage quizzes seamlessly
+                            within TutorLab. From multiple question types to
+                            detailed result analytics, streamline the assessment
+                            process and enhance the overall learning experience.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="why-choose-us" class="scroll-mt-24 mt-16">
+                    <h2 class="text-lg font-semibold mb-2">
+                      Why Choose TutorLab?
+                    </h2>
+                    <p class="text-sm sm:text-base leading-7">
+                      TutorLab is not just an LMS; it's a gateway to a new era
+                      of online education. Whether you are an educator striving
+                      for a dynamic teaching platform, a student seeking an
+                      interactive learning experience, or an administrator
+                      aiming for streamlined management – TutorLab is your
+                      all-in-one solution.
+                    </p>
+                    <p class="text-sm sm:text-base leading-7 mt-4">
+                      Join the educational revolution with TutorLab on
+                      Codecanyon today! Unleash the full potential of online
+                      learning and empower a generation of learners and
+                      educators.
+                    </p>
+                  </div>
+                </div>
+                <!-- System Requirements Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">System Requirements</h1>
+
+                    <div
+                      class="mt-8 scroll-mt-24"
+                      id="minimum-hardware-requirements"
+                    >
+                      <h2 class="text-lg font-semibold mb-4">
+                        Minimum Hardware Requirements
+                      </h2>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center"
+                          >
+                            <span class="font-medium">RAM:</span>
+                            <span>4 GB (Gigabyte) or more.</span>
+                          </div>
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center mt-2"
+                          >
+                            <span class="font-medium">Storage:</span>
+                            <span
+                              >A minimum of 40 GB (Gigabytes) of available
+                              storage space.</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-16 scroll-mt-24" id="operating-system">
+                      <h2 class="text-lg font-semibold mb-4">
+                        Operating System
+                      </h2>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center"
+                          >
+                            <span class="font-medium">Operating System:</span>
+                            <span>Ubuntu</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-16 scroll-mt-24" id="hosting-environment">
+                      <h2 class="text-lg font-semibold mb-4">
+                        Hosting Environment
+                      </h2>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center"
+                          >
+                            <span class="font-medium">VPS Hosting:</span>
+                            <span
+                              >This application requires Virtual Private Server
+                              (VPS) hosting for deployment.</span
+                            >
+                          </div>
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center mt-2"
+                          >
+                            <span class="font-medium">Ubuntu:</span>
+                            <span
+                              >The VPS should run on an Ubuntu-based operating
+                              system.</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-16 scroll-mt-24" id="additional-notes">
+                      <h2 class="text-lg font-semibold mb-4">
+                        Additional Notes
+                      </h2>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <p class="text-xs sm:text-sm">
+                            Ensure that the VPS hosting provider offers the
+                            necessary resources as specified in the minimum
+                            hardware requirements.
+                          </p>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Make sure that your VPS is set up and configured
+                            with Ubuntu.
+                          </p>
+                          <p class="text-xs sm:text-sm mt-2">
+                            Regularly monitor system resources to ensure optimal
+                            performance.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Installation Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">Installation</h1>
+                    <p class="text-sm sm:text-base leading-7">
+                      Here is a process for installation process from both
+                      backend and frontend
+                    </p>
+                    <div class="mt-8 scroll-mt-24" id="frontend-installation">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Tutorlab Frontend
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          First download the project from Codecanyon and cd into
+                          tutorlab-frontend
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 sm:pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              <code>cd tutorlab-frontend</code>
+                            </li>
+                            <li class="mt-2">
+                              In the root directory
+                              <code>.env.example</code>
+                              and make a new file into
+                              <code>.env</code>
+                              file
+                            </li>
+                            <li class="mt-2">
+                              Add your database credentials here in .env use
+                              your backend url in here
+                              <code>NEXT_PUBLIC_BASE_URL</code>
+                            </li>
+
+                            <li class="mt-2">
+                              Add your database credentials here in .env use
+                              your backend url in here
+                              <code>NEXT_PUBLIC_BASE_URL</code>
+                              and in
+                              <code> NEXT_PUBLIC_CLIENT_URL</code>
+                              add frontend url
+                            </li>
+                            <li class="mt-2">
+                              The run the command
+                              <code>yarn install</code>
+                            </li>
+                            <li class="mt-2">
+                              Now build frontend project using this command
+                              <code>yarn build</code>
+                            </li>
+                            <li class="mt-2">
+                              Finally run the command to start the frontend
+                              server
+                              <code>yarn start</code>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="backend-installation">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Tutorlab Backend
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          First download the project from Codecanyon and cd into
+                          tutorlab-backend
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 sm:pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              <code>cd tutorlab-backend</code>
+                            </li>
+                            <li class="mt-2">
+                              In the root directory
+                              <code>.env.example</code>
+                              and make a new file into
+                              <code>.env</code>
+                              file
+                            </li>
+                            <li class="mt-2">
+                              The run the command
+                              <code>yarn install</code>
+                            </li>
+                            <li class="mt-2">
+                              Add your database credentials here in env
+                              <code>DB_USERNAME</code>
+                              <code> DB_PASSWORD</code>
+                              <code>DB_HOST</code>
+                              <code>DB_PORT</code>
+                            </li>
+                            <li class="mt-2">
+                              Add your backend url here in
+                              <code>.env</code>
+                              <code>BACKEND_URL</code>
+                            </li>
+                            <li class="mt-2">
+                              The run the db command
+                              <code>yarn prisma:migrate</code>
+                            </li>
+                            <li class="mt-2">
+                              The run the seed command
+                              <code>yarn prisma:seed</code>
+                            </li>
+                            <li class="mt-2">
+                              Now build project using this command
+                              <code>yarn build</code>
+                            </li>
+                            <li class="mt-2">
+                              Finally run the command to start the server
+                              <code>yarn start:prod</code>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Vercel Deployment Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">Vercel Deployment</h1>
+                    <p class="text-sm sm:text-base leading-7">
+                      Here is a process for deploying TutorLab to Vercel using
+                      GitHub.
+                    </p>
+                    <div class="mt-8 scroll-mt-24" id="frontend-to-vercel">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Deploying Tutorlab Frontend to Vercel
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          To deploy the TutorLab frontend to Vercel from your
+                          GitHub repository, follow these steps
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 sm:pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              Ensure your TutorLab frontend project is hosted on
+                              a GitHub repository.
+                            </li>
+                            <li class="mt-2">
+                              Log in to your Vercel account or sign up if you
+                              don't have one.
+                            </li>
+                            <li class="mt-2">
+                              In Vercel, click on the "New Project" button.
+                            </li>
+                            <li class="mt-2">
+                              Choose your Git platform, in this case, select
+                              "GitHub." Authorize Vercel to access your GitHub
+                              account if prompted.
+                            </li>
+                            <li class="mt-2">
+                              Search for and select the repository containing
+                              your TutorLab frontend.
+                            </li>
+                            <li class="mt-2">
+                              Configure your settings, such as branch and
+                              environment variables, as needed.
+                            </li>
+                            <li class="mt-2">
+                              Click the "Deploy" button. Vercel will
+                              automatically build and deploy your Next.js
+                              frontend from the linked GitHub repository.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="backend-to-vercel">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Deploying tutorlab Backend to Vercel
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          To deploy the TutorLab backend to Vercel from your
+                          GitHub repository, follow these steps
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 sm:pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              Ensure your TutorLab backend project is hosted on
+                              a GitHub repository.
+                            </li>
+                            <li class="mt-2">
+                              Log in to your Vercel account or sign up if you
+                              don't have one.
+                            </li>
+                            <li class="mt-2">
+                              In Vercel, click on the "New Project" button.
+                            </li>
+                            <li class="mt-2">
+                              Choose your Git platform, in this case, select
+                              "GitHub." Authorize Vercel to access your GitHub
+                              account if prompted.
+                            </li>
+                            <li class="mt-2">
+                              Search for and select the repository containing
+                              your TutorLab backend.
+                            </li>
+                            <li class="mt-2">
+                              Configure your settings, such as branch and
+                              environment variables, as needed.
+                            </li>
+                            <li class="mt-2">
+                              Click the "Deploy" button. Vercel will
+                              automatically build and deploy your Nest.js
+                              backend from the linked GitHub repository.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- VPS Installation Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">VPS Installation</h1>
+                    <p class="text-sm sm:text-base leading-7">
+                      Here are the steps to set up your Virtual Private Server
+                      (VPS) for hosting the TutorLab frontend and backend using
+                      Nginx and Tmux.
+                    </p>
+                    <div
+                      class="mt-8 scroll-mt-24"
+                      id="prerequisites-vps-installation"
+                    >
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Prerequisites
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Before starting the VPS installation, ensure that you
+                          have access to a VPS with the following minimum
+                          specifications
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6">
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center"
+                          >
+                            <span class="font-medium">RAM:</span>
+                            <span>4 GB (Gigabyte) or more.</span>
+                          </div>
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center mt-2"
+                          >
+                            <span class="font-medium">Storage:</span>
+                            <span
+                              >A minimum of 40 GB (Gigabytes) of available
+                              storage space.</span
+                            >
+                          </div>
+                          <div
+                            class="text-xs sm:text-sm flex gap-x-2 items-center mt-2"
+                          >
+                            <span class="font-medium">Operating System:</span>
+                            <span>Ubuntu-based operating system.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="mysql-installation">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          MySQL Installation
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Install MySQL on your VPS by running the following
+                          commands
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>sudo apt update</code><br />
+                          <code> sudo apt install mysql-server</code>
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 mt-4">
+                        During the installation, you'll be prompted to set a
+                        root password for MySQL. Make sure to remember it for
+                        later use.
+                      </p>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="node-js-installation">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Node.js Installation
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Install Node.js on your VPS using the following
+                          commands
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code
+                            >curl -fsSL https://deb.nodesource.com/setup_16.x |
+                            sudo -E bash -</code
+                          ><br />
+                          <code>sudo apt-get install -y nodejs</code>
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Verify the Node.js installation with:
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>node -v</code><br />
+                          <code>npm -v</code>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="setting-up-nginx">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Setting Up Nginx
+                        </h2>
+                        <p class="text-sm leading-7">
+                          Install Nginx on your VPS
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>sudo apt install nginx</code>
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Start and enable Nginx:
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>sudo systemctl start nginx</code><br />
+                          <code>sudo systemctl enable nginx</code>
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Create Nginx server blocks for both the frontend and
+                        backend. Replace <code>/path/to/frontend</code>
+                        and
+                        <code>/path/to/backend</code> with your actual project
+                        paths
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code
+                            >sudo nano /etc/nginx/sites-available/frontend</code
+                          ><br />
+                          <code>
+                            sudo nano /etc/nginx/sites-available/backend</code
+                          >
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        For the frontend server block
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>
+                            server { listen 80; server_name
+                            your-frontend-domain.com
+                            www.your-frontend-domain.com; root
+                            /path/to/frontend; location / { try_files $uri
+                            /index.html; } }</code
+                          >
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        For the backend server block
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>
+                            server { listen 80; server_name
+                            your-backend-domain.com www.your-backend-domain.com;
+                            root /path/to/backend; location / { proxy_pass
+                            http://127.0.0.1:YOUR_BACKEND_PORT; # Replace
+                            YOUR_BACKEND_PORT proxy_set_header Host $host;
+                            proxy_set_header X-Real-IP $remote_addr; } }</code
+                          >
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Enable the server blocks:
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code
+                            >sudo ln -s /etc/nginx/sites-available/frontend
+                            /etc/nginx/sites-enabled/</code
+                          ><br />
+                          <code
+                            >sudo ln -s /etc/nginx/sites-available/backend
+                            /etc/nginx/sites-enabled/</code
+                          >
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Test the Nginx configuration and reload it:
+                      </p>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>sudo nginx -t</code><br />
+                          <code>sudo systemctl reload nginx</code>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-16 scroll-mt-24" id="tmux-installation">
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          Tmux Installation
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Install Tmux on your VPS:
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div
+                          class="relative rounded-2xl p-6 text-xs sm:text-sm"
+                        >
+                          <code>sudo apt install tmux</code>
+                        </div>
+                      </div>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        You can use Tmux to run your Node.js applications in the
+                        background, keeping them running even after you
+                        disconnect from SSH.
+                      </p>
+                      <p class="text-xs sm:text-sm leading-7 my-4">
+                        Now you have set up your VPS with MySQL, Node.js, Nginx,
+                        and Tmux, and you can deploy your TutorLab frontend and
+                        backend to the server.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Installation on VPS Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">
+                      Project Installation on VPS
+                    </h1>
+                    <p class="text-sm sm:text-base leading-7">
+                      This section will guide you through the installation and
+                      deployment of the TutorLab frontend and backend on your
+                      VPS.
+                    </p>
+                    <div
+                      class="mt-8 scroll-mt-24"
+                      id="frontend-installation-on-vps"
+                    >
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          TutorLab Frontend Installation
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Follow these steps to install and deploy the TutorLab
+                          frontend on your VPS:
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 sm:pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              Download the TutorLab Frontend project from
+                              Codecanyon.
+                            </li>
+                            <li class="mt-2">
+                              SSH into your VPS. If you don't have an SSH
+                              client, you can use PuTTY or other similar tools.
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Change your working directory to where you want
+                                to deploy the frontend:</span
+                              >
+                              <code>cd /path/to/frontend</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Create a `.env` file by copying the
+                                example:</span
+                              >
+
+                              <code>cp .env.example .env</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Edit the `.env` file and add your database
+                                credentials, backend URL, and frontend
+                                URL:</span
+                              >
+                              <code> NEXTPUBLICBASEURL=YOUR_BACKEND_URL </code>
+                              <br />
+                              <code>
+                                NEXTPUBLICCLIENTURL=YOUR_FRONTEND_URL
+                              </code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Install project dependencies:</span
+                              >
+
+                              <code>yarn install</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Build the frontend:
+                              </span>
+                              <code>yarn build</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Start the frontend server in the background
+                                using `tmux`:
+                              </span>
+                              <code
+                                >tmux new-session -d -s frontend-session
+                              </code>
+                              <br />
+                              <code> tmux send-keys 'yarn start' C-m</code>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="mt-8 scroll-mt-24"
+                      id="backend-installation-on-vps"
+                    >
+                      <div class="mb-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                          TutorLab Backend Installation
+                        </h2>
+                        <p class="text-xs sm:text-sm leading-7">
+                          Follow these steps to install and deploy the TutorLab
+                          backend on your VPS:
+                        </p>
+                      </div>
+                      <div
+                        class="group relative flex rounded-2xl bg-zinc-50 transition-shadow hover:shadow-md hover:shadow-zinc-900/5"
+                      >
+                        <div
+                          class="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"
+                        ></div>
+                        <div class="relative rounded-2xl p-6 pl-[40px]">
+                          <ul class="list-disc text-xs sm:text-sm">
+                            <li>
+                              Download the TutorLab Backend project from
+                              Codecanyon.
+                            </li>
+                            <li class="mt-2">SSH into your VPS.</li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Change your working directory to where you want
+                                to deploy the backend:</span
+                              >
+                              <code>cd /path/to/backend</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Create a `.env` file by copying the
+                                example:</span
+                              >
+
+                              <code>cp .env.example .env</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Edit the `.env` file and add your database
+                                credentials and backend URL:</span
+                              >
+                              <code> DBUSERNAME=YOUR_DB_USERNAME </code>
+                              <br />
+                              <code> DBPASSWORD=YOUR_DB_PASSWORD </code>
+                              <br />
+                              <code> DBHOST=YOUR_DB_HOST </code>
+                              <br />
+                              <code> DBPORT=YOUR_DB_PORT </code>
+                              <br />
+                              <code> BACKENDURL=YOUR_BACKEND_URL </code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2"
+                                >Install project dependencies:</span
+                              >
+
+                              <code>yarn install</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Run Prisma migration to set up the database:
+                              </span>
+                              <code>yarn prisma:migrate</code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Run Prisma seed to populate the database (if
+                                required):
+                              </span>
+                              <code>yarn prisma:seed </code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Build the backend:
+                              </span>
+                              <code>yarn build </code>
+                            </li>
+                            <li class="mt-2">
+                              <span class="block mb-2">
+                                Start the backend server in the background using
+                                `tmux`:
+                              </span>
+                              <code
+                                >tmux new-session -d -s backend-session
+                              </code>
+                              <br />
+                              <code>tmux send-keys 'yarn start:prod' C-m </code>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pages Preview Section -->
+                <div class="mt-16">
+                  <div>
+                    <h1 class="text-2xl font-bold mb-2">Pages Preview</h1>
+
+                    <div class="mt-8 scroll-mt-36" id="pages-preview">
+                      <div class="p-6 rounded-2xl bg-zinc-50">
+                        <img
+                          src="assets/images/1.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/2.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/3.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/4.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/5.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/6.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/7.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/8.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/9.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/11.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/12.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/13.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/14.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/15.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/16.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/17.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/18.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/19.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/20.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/21.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/22.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                      <div class="p-6 rounded-2xl bg-zinc-50 mt-6">
+                        <img
+                          src="assets/images/23.png"
+                          class="w-full h-full object-center object-cover rounded-2xl"
+                          alt="TutorLab"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </main>
+          <footer
+            class="py-10 border-t border-zinc-900/10 text-center text-xs sm:text-sm"
+          >
+            <p class="text-center">
+              Copyright &copy; 2023
+              <a
+                target="_blank"
+                href="https://tutorlab.tradexpro.org/"
+                class="underline text-zinc-600"
+                >TutorLab</a
+              >. All Rights Reserved.
+            </p>
+            <p class="text-center mb-0 mt-4">
+              Design &amp; Develop by
+              <a
+                class="underline text-zinc-600"
+                target="_blank"
+                href="https://itech-softsolutions.com/"
+                >Itechsoft Solution</a
+              >.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      let toggleBtn = () => {
+        var customNavbar = document.getElementById("custom-navbar");
+        customNavbar.classList.remove("hidden");
+        customNavbar.classList.add(
+          "fixed",
+          "top-0",
+          "bg-white",
+          "z-50",
+          "py-10",
+          "px-5",
+          "w-full",
+          "h-full",
+          "overflow-y-auto"
+        );
+      };
+
+      let closeNavbar = () => {
+        var customNavbar = document.getElementById("custom-navbar");
+        customNavbar.classList.add("hidden");
+        customNavbar.classList.remove(
+          "fixed",
+          "top-0",
+          "bg-white",
+          "z-50",
+          "py-10",
+          "px-5",
+          "w-full",
+          "h-full",
+          "overflow-y-auto"
+        );
+      };
+    </script>
+  </body>
+</html>
